@@ -1,0 +1,88 @@
+@import "seattletimes";
+@import (inline) "npm://chartist/dist/chartist.min.css";
+
+@light: #41b6c4;
+@med: #2c7fb8;
+@dark: #253494;
+
+body {
+  max-width: 630px;
+  font-family: @df-sans;
+}
+
+.permits {
+  .ct-series-a {
+    path, line {
+      stroke: @light;
+    }
+  }
+  .ct-series-b {
+    path, line {
+      stroke: @dark;
+    }
+  }
+}
+
+.aaa {
+  .ct-label {
+    font-size: 18px;
+  }
+  .ct-bar {
+    stroke-width: 20px;
+  }
+  .ct-series-a line {
+    stroke: @light;
+  }
+}
+
+.citations {
+  .ct-bar {
+    stroke-width: 30px;
+  }
+
+  .ct-series-a line {
+    stroke: @light;
+    &:nth-child(1), &:nth-child(3) {
+      stroke: @med;
+    }
+  }
+}
+
+.inline {
+  width: 50%;
+  float: left;
+}
+
+.testing {
+  #ct-testing-1, #ct-testing-2 {
+    .ct-series-a path {
+      fill: @dark;
+    }
+    .ct-series-b path {
+      fill: @light;
+    }
+  }
+}
+
+
+.bar {
+  height: 30px;
+  background: black;
+  float: left;
+}
+
+.bar-1 {
+  background: #ffffcc;
+}
+.bar-2 {
+  background: #a1dab4;
+}
+.bar-3 {
+  background: #41b6c4;
+}
+.bar-4 {
+  background: #2c7fb8;
+}
+.bar-5 {
+  background: #253494;
+}
