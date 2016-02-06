@@ -1,5 +1,6 @@
 require("component-responsive-frame/child");
 var Chartist = require("chartist");
+var $ = require("jquery");
 
 var permitData = {
   labels: ["2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014"],
@@ -18,4 +19,31 @@ var permitChart = new Chartist.Line('#ct-permits', permitData, {
       return value + "%";
     }
   }
+});
+
+var $chart = $('#ct-permits');
+
+var $toolTip = $chart
+  .append('<div class="tooltip"></div>')
+  .find('.tooltip')
+  .hide();
+
+$chart.on('mouseenter', '.ct-point', function() {
+  console.log("hello")
+  var $point = $(this);
+  var value = Math.round($point.attr('ct:value'));
+  $toolTip.html(
+    `${value}%`
+  ).show();
+});
+
+$chart.on('mouseleave', '.ct-point', function() {
+  $toolTip.hide();
+});
+
+$chart.on('mousemove', function(event) {
+  $toolTip.css({
+    left: (event.offsetX || event.originalEvent.layerX) - $toolTip.width() / 2 - 10,
+    top: (event.offsetY || event.originalEvent.layerY) - $toolTip.height() - 30
+  });
 });

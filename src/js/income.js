@@ -66,12 +66,14 @@ var incomeChart = new Chartist.Bar('#ct-income', {
   stackBars: true,
   horizontalBars: true,
   axisX: {
-    showGrid: false,
-    showLabel: false
+    onlyInteger: true,
+    high: 100,
+    labelInterpolationFnc: function(value) {
+      return (value) + '%';
+    }
   },
   axisY: {
-    showGrid: false,
-    offset: 75
+    showGrid: false
   },
    seriesBarDistance: 2
 });

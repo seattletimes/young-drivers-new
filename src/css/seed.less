@@ -10,8 +10,12 @@ body {
   font-family: @df-sans;
 }
 
-.ct-bar {
+.ct-bar, .ct-point {
   cursor: pointer;
+}
+
+.ct-point:hover {
+  stroke: #e34a33 !important;
 }
 
 .tooltip {
@@ -90,7 +94,9 @@ body {
 
 .income {
   .ct-label {
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center !important;
   }
 
   .ct-bar {
