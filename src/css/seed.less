@@ -10,6 +10,29 @@ body {
   font-family: @df-sans;
 }
 
+.ct-bar {
+  cursor: pointer;
+}
+
+.tooltip {
+  position: absolute;
+  display: inline-block;
+  line-height: 1.1;
+  padding: 0.4em;
+  background: #ffffff;
+  border: 1px solid @df-border-gray;
+  min-width: 7em;
+  color: #453D3F;
+  font-weight: 700;
+  text-align: center;
+  pointer-events: none;
+  stroke: #679BD2;
+  z-index: 1;
+  @media @mobile {
+    min-width: 0;
+  }
+}
+
 .permits {
   .ct-series-a {
     path, line {
@@ -65,24 +88,27 @@ body {
 }
 
 
-.bar {
-  height: 30px;
-  background: black;
-  float: left;
-}
+.income {
+  .ct-label {
+    font-size: 15px;
+  }
 
-.bar-1 {
-  background: #ffffcc;
-}
-.bar-2 {
-  background: #a1dab4;
-}
-.bar-3 {
-  background: #41b6c4;
-}
-.bar-4 {
-  background: #2c7fb8;
-}
-.bar-5 {
-  background: #253494;
+  .ct-bar {
+    stroke-width: 40px;
+  }
+  .ct-series-a line {
+    stroke: #253494;
+  }
+  .ct-series-b line {
+    stroke: #225ea8;
+  }
+  .ct-series-c line {
+    stroke: #1d91c0;
+  }
+  .ct-series-d line {
+    stroke: #41b6c4;
+  }
+  .ct-series-e line {
+    stroke: #7fcdbb;
+  }
 }

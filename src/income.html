@@ -10,18 +10,9 @@
   <body>
 
     <responsive-child>
-      <% csv.income.forEach(function(row) { %>
-        <div>
-          <%= row.age %>
-          <div class="bars">
-            <div class="bar bar-1" style='width: <%= row["20th"] %>%'></div>
-            <div class="bar bar-2" style='width: <%= row["40th"] %>%'></div>
-            <div class="bar bar-3" style='width: <%= row["60th"] %>%'></div>
-            <div class="bar bar-4" style='width: <%= row["80th"] %>%'></div>
-            <div class="bar bar-5" style='width: <%= row["100th"] %>%'></div>
-          </div>
-        </div>
-      <% }); %>
+      <div class="income">
+        <div class="ct-chart ct-perfect-fourth" id="ct-income"></div>
+      </div>
     </responsive-child>
 
     <script src="income.js" async></script>
