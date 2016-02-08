@@ -4,18 +4,77 @@
 @light: #41b6c4;
 @med: #2c7fb8;
 @dark: #253494;
+@highlight: #e34a33;
 
 body {
   max-width: 630px;
   font-family: @df-sans;
 }
 
-.ct-bar, .ct-point {
+.title {
+  color: @df-dark-gray;
+  font-weight: bold;
+  font-size: 24px;
+  padding-bottom: 10px;
+
+  @media @mobile {
+    font-size: 20px;
+  }
+}
+
+.subtitle {
+  text-align: center;
+  padding-top: 10px;
+  font-weight: bold;
+  color: @df-middle-gray;
+
+  @media @mobile {
+    font-size: 15px;
+  }
+}
+
+.source {
+  padding-top: 10px;
+  font-style: italic;
+}
+.source, .credit {
+  font-size: 11px;
+  color: rgba(0,0,0,.4);
+  // text-align: right;
+}
+
+.legend {
+  color: @df-middle-gray;
+  font-size: 14px;
+  padding-bottom: 15px;
+}
+
+.category {
+  display: inline-block;
+  padding-left: 20px;
+
+  &:first-child {
+    padding-left: 0;
+  }
+}
+
+.swatch {
+  width: 20px;
+  height: 10px;
+  margin-right: 2px;
+  background: red;
+  display: inline-block;
+}
+
+.ct-bar, .ct-point, .ct-slice-pie {
   cursor: pointer;
 }
 
-.ct-point:hover {
-  stroke: #e34a33 !important;
+.ct-bar:hover, .ct-point:hover {
+  stroke: @highlight !important;
+}
+.ct-slice-pie:hover {
+  fill: @highlight !important;
 }
 
 .tooltip {
@@ -23,11 +82,11 @@ body {
   display: inline-block;
   line-height: 1.1;
   padding: 0.4em;
-  background: #ffffff;
-  border: 1px solid @df-border-gray;
-  min-width: 7em;
-  color: #453D3F;
-  font-weight: 700;
+  background: white;
+  border: 1px solid @df-light-gray;
+  color: @df-dark-gray;
+  font-weight: bold;
+  font-size: 14px;
   text-align: center;
   pointer-events: none;
   stroke: #679BD2;
@@ -35,6 +94,17 @@ body {
   @media @mobile {
     min-width: 0;
   }
+}
+
+.ct-label {
+  @media @mobile {
+    font-size: 10px;
+  }
+}
+.ct-horizontal {
+  font-weight: bold;
+  color: @df-middle-gray;
+  padding-top: 5px;
 }
 
 .permits {
@@ -60,6 +130,11 @@ body {
   .ct-series-a line {
     stroke: @light;
   }
+  @media @mobile {
+    foreignobject, .ct-label {
+      width: 200px !important;
+    }
+  }
 }
 
 .citations {
@@ -69,9 +144,9 @@ body {
 
   .ct-series-a line {
     stroke: @light;
-    &:nth-child(1), &:nth-child(3) {
-      stroke: @med;
-    }
+    // &:nth-child(1), &:nth-child(3) {
+    //   stroke: @med;
+    // }
   }
 }
 
@@ -88,6 +163,10 @@ body {
     .ct-series-b path {
       fill: @light;
     }
+  }
+
+  .subtitle {
+    margin-bottom: 10px;
   }
 }
 
