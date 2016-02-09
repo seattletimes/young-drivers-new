@@ -12,57 +12,60 @@ function commafy( num ) {
 
 var series = [
   [
-    {meta: 17734, value: 41.66921215},
-    {meta: 5694, value: 35.45675322},
-    {meta: 2560, value: 33.33333333},
-    {meta: 2104, value: 30.06573307},
-    {meta: 944, value: 28.01186944},
-    {meta: 590, value: 24.69652574},
-    {meta: 473, value: 24.96042216}
+    {value: 44.52554745, meta: 1952},
+    {value: 45.80613172, meta: 5543},
+    {value: 46.88434123, meta: 6117},
+    {value: 52.59627562, meta: 11213},
+    {value: 58.91890096, meta: 17734}
   ],
   [
-    {meta: 11213, value: 26.34695364},
-    {meta: 4385, value: 27.30556074},
-    {meta: 2082, value: 27.109375},
-    {meta: 1859, value: 26.56473278},
-    {meta: 833, value: 24.71810089},
-    {meta: 544, value: 22.77103391},
-    {meta: 403, value: 21.26649077}
+    {value: 22.42244526, meta: 983},
+    {value: 20.17188662, meta: 2441},
+    {value: 19.59071051, meta: 2556},
+    {value: 20.56850697, meta: 4385},
+    {value: 18.91757201, meta: 5694}
   ],
   [
-    {meta: 6117, value: 14.37298809},
-    {meta: 2556, value: 15.91630861},
-    {meta: 1350, value: 17.578125},
-    {meta: 1403, value: 20.04858531},
-    {meta: 699, value: 20.74183976},
-    {meta: 527, value: 22.0594391},
-    {meta: 395, value: 20.84432718}
+    {value: 11.01733577, meta: 483},
+    {value: 9.957854723, meta: 1205},
+    {value: 10.34720625, meta: 1350},
+    {value: 9.765936489, meta: 2082},
+    {value: 8.505265956, meta: 2560}
   ],
   [
-    {meta: 5543, value: 13.02427219},
-    {meta: 2441, value: 15.20019927},
-    {meta: 1205, value: 15.69010417},
-    {meta: 1217, value: 17.39068305},
-    {meta: 685, value: 20.3264095},
-    {meta: 535, value: 22.39430724},
-    {meta: 475, value: 25.06596306}
+    {value: 9.466240876, meta: 415},
+    {value: 10.05702008, meta: 1217},
+    {value: 10.75342991, meta: 1403},
+    {value: 8.719921197, meta: 1859},
+    {value: 6.990265457, meta: 2104}
   ],
   [
-    {meta: 1952, value: 4.586573933},
-    {meta: 983, value: 6.121178156},
-    {meta: 483, value: 6.2890625},
-    {meta: 415, value: 5.93026579},
-    {meta: 209, value: 6.201780415},
-    {meta: 193, value: 8.078694014},
-    {meta: 149, value: 7.862796834}
+    {value: 4.767335766, meta: 209},
+    {value: 5.660689199, meta: 685},
+    {value: 5.357553461, meta: 699},
+    {value: 3.907312726, meta: 833},
+    {value: 3.136316821, meta: 944}  
+  ],
+  [
+    {value: 4.402372263, meta: 193},
+    {value: 4.421122221, meta: 535},
+    {value: 4.039242738, meta: 527},
+    {value: 2.551714433, meta: 544},
+    {value: 1.960198013, meta: 590}
+  ],
+  [
+    {value: 3.398722628, meta: 149},
+    {value: 3.92529543, meta: 475},
+    {value: 3.027515904, meta: 395},
+    {value: 1.890332567, meta: 403},
+    {value: 1.57148078, meta: 473}
   ]
 ];
 
 var incomeChart = new Chartist.Bar('#ct-income', {
-  labels: ['15', '16', '17', '18', '19', '20', '21'],
+  labels: ['Below 20th percentile', 'Below 40th percentile', 'Below 60th percentile', 'Below 80th percentile', 'Richest'],
   series: series,
 }, {
-  reverseData: true,
   stackBars: true,
   horizontalBars: true,
   axisX: {
@@ -73,7 +76,9 @@ var incomeChart = new Chartist.Bar('#ct-income', {
     }
   },
   axisY: {
-    showGrid: false
+    showGrid: false,
+    offset: 75
+
   },
    seriesBarDistance: 2
 });
@@ -90,7 +95,7 @@ $chart.on('mouseenter', '.ct-bar', function() {
     value = Math.round($bar.attr('ct:value')),
     meta = commafy($bar.attr('ct:meta'));
     $toolTip.html(
-      `${meta} (${value}%)`
+      `${meta} (<strong>${value}%</strong>)`
     ).show();
 });
 

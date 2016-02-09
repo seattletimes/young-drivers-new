@@ -193,14 +193,22 @@ body {
 
 
 .income {
-  .ct-label {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center !important;
-  }
-
   .ct-bar {
-    stroke-width: 25px;
+    stroke-width: 35px;
+
+    @media @mobile {
+      stroke-width: 20px;
+    }
+  }
+  .ct-vertical {
+    font-weight: bold;
+    color: @df-dark-gray;
+  }
+  .ct-horizontal {
+    margin-left: -10px;
+  }
+  .ct-horizontal {
+    font-weight: normal;
   }
   .ct-series-a line {
     stroke: #253494;
@@ -216,5 +224,11 @@ body {
   }
   .ct-series-e line {
     stroke: #7fcdbb;
+  }
+  .ct-series-f line {
+    stroke: #c7e9b4;
+  }
+  .ct-series-g line {
+    stroke: #edf8b1;
   }
 }
