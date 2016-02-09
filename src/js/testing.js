@@ -49,7 +49,7 @@ $chart1.on('mouseenter', '.ct-slice-pie', function() {
   value = commafy(value);
   var meta = $slice.attr('ct:meta');
   $toolTip1.html(
-    `${value} (${meta})`
+    `${value} people<br>(<strong>${meta}</strong>)`
   ).show();
 });
 
@@ -77,7 +77,7 @@ $chart2.on('mouseenter', '.ct-slice-pie', function() {
   value = commafy(value);
   var meta = $slice.attr('ct:meta');
   $toolTip2.html(
-    `${value} (${meta})`
+    `${value} people<br>(<strong>${meta}</strong>)`
   ).show();
 });
 
