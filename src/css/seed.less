@@ -122,10 +122,26 @@ body {
 
 .aaa {
   .ct-label {
-    font-size: 18px;
+    color: @df-middle-gray;
+
+    &.ct-vertical {
+      font-size: 16px;
+
+      @media @tablet {
+        font-size: 14px;
+      }
+
+      @media @mobile {
+        font-size: 12px;
+      }
+    }
   }
   .ct-bar {
     stroke-width: 20px;
+
+    @media @mobile {
+      stroke-width: 12px;
+    }
   }
   .ct-series-a line {
     stroke: @light;
