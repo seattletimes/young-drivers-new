@@ -16,14 +16,14 @@ function commafy( num ) {
 var testingData = [
   { series: 
     [
-      {meta: '10.9%', value: 6632},
-      {meta: '89.1%', value: 54220}
+      {meta: "6,632 people failed", value: 10.9},
+      {meta: "54,220 people passed", value: 89.1}
     ]
   },
   { series: 
     [
-      {meta: '24.0%', value: 9020},
-      {meta: '76.0%', value: 28579}
+      {meta: "9,020 people failed", value: 24.0},
+      {meta: "28,579 people passed", value: 76.0}
     ]
   }
 ];
@@ -49,7 +49,7 @@ $chart1.on('mouseenter', '.ct-slice-pie', function() {
   value = commafy(value);
   var meta = $slice.attr('ct:meta');
   $toolTip1.html(
-    `${value} people<br>(<strong>${meta}</strong>)`
+    `${meta}<br>(<strong>${value}</strong>%)`
   ).show();
 });
 
@@ -77,7 +77,7 @@ $chart2.on('mouseenter', '.ct-slice-pie', function() {
   value = commafy(value);
   var meta = $slice.attr('ct:meta');
   $toolTip2.html(
-    `${value} people<br>(<strong>${meta}</strong>)`
+    `${meta}<br>(<strong>${value}</strong>%)`
   ).show();
 });
 

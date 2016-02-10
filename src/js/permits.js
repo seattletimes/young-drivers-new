@@ -44,12 +44,13 @@ var permitData = {
 
 var permitChart = new Chartist.Line('#ct-permits', permitData, {
   axisX: {
-    showGrid: false
+    showGrid: false,
   },
   axisY: {
     labelInterpolationFnc: function(value) {
       return value + "%";
-    }
+    },
+    offset: 55
   }
 },
 [
@@ -77,11 +78,11 @@ $chart.on('mouseenter', '.ct-point', function() {
   var meta = commafy($point.attr('ct:meta'));
   if (value !== 0) {
     $toolTip.html(
-      `${meta} permitted <br>(<span class='tiny'>${sign}</span>${value}%)`
+      `${meta} people issued a permit <br>(<span class='tiny'>${sign}</span><strong>${value}%</strong> from 2004)`
     ).show();
   } else {
     $toolTip.html(
-      `${meta} permitted`
+      `${meta} people issued a permit`
     ).show();
   }
 });

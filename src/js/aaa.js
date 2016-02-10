@@ -6,14 +6,14 @@ var aaaData = {
   labels: [
     "Did not have a car", 
     "Could get around without driving", 
-    "<strong>Gas was too expensive</strong>", 
-    "<strong>Driving was too expensive</strong>", 
+    "Gas was too expensive", 
+    "Driving was too expensive", 
     "Just didn’t get around to it", 
     "Could do what I wanted to do without driving", 
     "Was nervous about driving", 
     "Just not very interested in driving", 
     "Had to complete driver education course first", 
-    "<strong>Getting a license was too expensive</strong>"
+    "Getting a license was too expensive"
   ],
   series: [
     [44, 39, 36, 36, 35, 32, 30, 29, 28, 26],

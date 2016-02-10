@@ -20,18 +20,40 @@ body {
   color: @df-dark-gray;
   font-weight: bold;
   font-size: 24px;
-  padding-bottom: 10px;
+  // padding-bottom: 10px;
 
   @media @mobile {
     font-size: 20px;
   }
 }
 
+.chatter {
+  font-size: 13px;
+  padding-bottom: 10px;
+  color: rgba(0,0,0,.5);
+  font-style: italic;
+}
+
+.ylabel {
+  top: 40%;
+  left: -40px;
+  position: absolute;
+  transform: rotate(270deg);
+  font-size: 12px;
+  color: rgba(0,0,0,.4);
+}
+
+.xlabel {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(0,0,0,.4);
+}
+
 .subtitle {
   text-align: center;
   padding-top: 10px;
   font-weight: bold;
-  color: @df-middle-gray;
+  color: rgba(0,0,0,.5);
 
   @media @mobile {
     font-size: 15px;
@@ -49,18 +71,13 @@ body {
 }
 
 .legend {
-  color: @df-middle-gray;
+  color: rgba(0,0,0,.5);
   font-size: 14px;
-  padding-bottom: 15px;
 }
 
 .category {
   display: inline-block;
-  padding-left: 20px;
-
-  &:first-child {
-    padding-left: 0;
-  }
+  padding-right: 20px;
 }
 
 .swatch {
@@ -89,7 +106,7 @@ body {
   padding: 0.4em;
   background: white;
   border: 1px solid @df-light-gray;
-  color: @df-dark-gray;
+  color: rgba(0,0,0,.5);
   // font-weight: bold;
   font-size: 14px;
   text-align: center;
@@ -108,11 +125,14 @@ body {
 }
 .ct-horizontal {
   font-weight: bold;
-  color: @df-middle-gray;
+  color: rgba(0,0,0,.6);
   padding-top: 5px;
 }
 
 .permits {
+  padding-top: 10px;
+  position: relative;
+
   .ct-series-a {
     path, line {
       stroke: @light;
@@ -127,7 +147,7 @@ body {
 
 .aaa {
   .ct-label {
-    color: @df-middle-gray;
+    color: rgba(0,0,0,.5);
 
     &.ct-vertical {
       font-size: 16px;
@@ -159,6 +179,8 @@ body {
 }
 
 .citations {
+  position: relative;
+
   .ct-bar {
     stroke-width: 30px;
   }
@@ -194,7 +216,7 @@ body {
 
 .income {
   .ct-bar {
-    stroke-width: 35px;
+    stroke-width: 25px;
 
     @media @mobile {
       stroke-width: 20px;
@@ -202,33 +224,34 @@ body {
   }
   .ct-vertical {
     font-weight: bold;
-    color: @df-dark-gray;
+    color: rgba(0,0,0,.6);
   }
   .ct-horizontal {
     margin-left: -10px;
+    color: rgba(0,0,0,.5);
   }
   .ct-horizontal {
     font-weight: normal;
   }
   .ct-series-a line {
-    stroke: #253494;
+    stroke: #edf8b1;
   }
   .ct-series-b line {
-    stroke: #225ea8;
+    stroke: #c7e9b4;
   }
   .ct-series-c line {
-    stroke: #1d91c0;
+    stroke: #7fcdbb;
   }
   .ct-series-d line {
     stroke: #41b6c4;
   }
   .ct-series-e line {
-    stroke: #7fcdbb;
+    stroke: #1d91c0;
   }
   .ct-series-f line {
-    stroke: #c7e9b4;
+    stroke: #225ea8;
   }
   .ct-series-g line {
-    stroke: #edf8b1;
+    stroke: #253494;
   }
 }

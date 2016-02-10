@@ -5,7 +5,7 @@ var $ = require("jquery");
 var citationData = {
   labels: [16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
   series: [
-    [268.5, 438.9, 751.5, 654.2, 678.7, 623.8, 546.6, 474.6, 460.8, 393.2]
+    [0.27, 0.44, 0.75, 0.65, 0.68, 0.62, 0.55, 0.47, 0.46, 0.39]
   ]
 };
 
@@ -24,9 +24,9 @@ var $toolTip = $chart
 
 $chart.on('mouseenter', '.ct-bar', function() {
   var $bar = $(this);
-  var value = Math.round($bar.attr('ct:value'));
+  var value = $bar.attr('ct:value');
   $toolTip.html(
-    `${value} citations`
+    `<strong>${value}</strong> citations per driver`
   ).show();
 });
 
