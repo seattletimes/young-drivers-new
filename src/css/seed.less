@@ -44,6 +44,13 @@ body {
   }
 }
 
+.note {
+  font-size: 12px;
+  color: rgba(0,0,0,.4);
+  padding-bottom: 10px;
+  color: lighten(@highlight, 10%);
+}
+
 .ylabel {
   top: 40%;
   left: -40px;
@@ -174,6 +181,10 @@ body {
   padding-top: 10px;
   position: relative;
 
+  .note {
+    padding-bottom: 10px;
+  }
+
   .ct-series-a {
     path, line {
       stroke: @light;
@@ -203,7 +214,7 @@ body {
         font-weight: 400;
       }
     }
-    &.weigh-horizontal {
+    &.ct-horizontal {
       margin-left: -10px;
       font-weight: 400;
     }
@@ -230,6 +241,10 @@ body {
 
   .ct-bar {
     stroke-width: 30px;
+
+    @media @mobile {
+      stroke-width: 20px;
+    }
   }
 
   .ct-series-a line {
@@ -273,6 +288,12 @@ body {
 
 .income {
   position: relative;
+
+  .note {
+    padding-top: 15px;
+    padding-bottom: 0;
+  }
+
   .ylabel {
     left: -33px;
   }

@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <%= t.include("partials/_head.html") %>
   </head>
   <body>
@@ -13,15 +14,14 @@
     <div class="outer">
       <div class="title">More traffic tickets for drivers who waited</div>
       <div class="chatter">The Department of Licensing studied citation rates from 2012 for young drivers after they had been on the road for two years.</div>
+      <div class="note"><i class="fa fa-hand-o-right"></i> Touch or hover on chart for more detail</div>
 
       <div class="citations">
         <div class="ylabel">Citations per driver</div>
         <div class="ct-chart ct-octave" id="ct-citations"></div>
         <div class="xlabel">Age when licensed</div>
       </div>
-      
-      <div class="source">Source: Washington State Department of Licensing</div>
-      <div class="credit">AUDREY CARLSEN / THE SEATTLE TIMES</div>
+    
     </div>
     </responsive-child>
 
