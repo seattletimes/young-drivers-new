@@ -63,7 +63,7 @@ var series = [
 ];
 
 var incomeChart = new Chartist.Bar('#ct-income', {
-  labels: ['< $39,500', '$39,500 - $48,100', '$48,100 - $57,100', '$57,100 - $67,700', '> $67,700'],
+  labels: ['< $39,480', '$39,480 - $48,080', '$48,080 - $57,080', '$57,080 - $67,660', '> $67,660'],
   series: series
 }, {
   reverseData: true,
@@ -79,7 +79,6 @@ var incomeChart = new Chartist.Bar('#ct-income', {
   axisY: {
     showGrid: false,
     offset: 75
-
   },
    seriesBarDistance: 2
 });

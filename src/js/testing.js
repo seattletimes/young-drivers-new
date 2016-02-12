@@ -77,7 +77,7 @@ $chart2.on('mouseenter', '.ct-slice-pie', function() {
   value = commafy(value);
   var meta = $slice.attr('ct:meta');
   $toolTip2.html(
-    `${meta}<br>(<strong>${value}</strong>%)`
+    `${meta}<br>(<strong>${value}%</strong>)`
   ).show();
 });
 

@@ -57,7 +57,7 @@ $chart.on('mouseenter', '.ct-bar', function() {
   var $bar = $(this);
   var value = Math.round($bar.attr('ct:value'));
   $toolTip.html(
-    `${value}%`
+    `<strong>${value}%</strong>`
   ).show();
 });
 

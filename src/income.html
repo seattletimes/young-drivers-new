@@ -10,23 +10,26 @@
   <body>
 
     <responsive-child>
+    <div class="outer">
       <div class="title">In poorer areas, a greater percentage of young people wait</div>
-      <div class="chatter">Department of Licensing permit data from 2014, compared to median income data for Washington that same year.</div>
-      <div class="legend">
+      <div class="chatter">Department of Licensing permit data from 2014, compared to median income data for Washington ZIP codes that same year</div>
+      <div class="stretch-legend">
         <strong>Age when issued permit:</strong><br>
-        <div class="category"><div class="swatch" style="background: #edf8b1"></div> 15 years old</div>
-        <div class="category"><div class="swatch" style="background: #c7e9b4"></div> 16</div>
-        <div class="category"><div class="swatch" style="background: #7fcdbb"></div> 17</div>
-        <div class="category"><div class="swatch" style="background: #41b6c4"></div> 18</div>
-        <div class="category"><div class="swatch" style="background: #1d91c0"></div> 19</div>
-        <div class="category"><div class="swatch" style="background: #225ea8"></div> 20</div>
-        <div class="category"><div class="swatch" style="background: #253494"></div> 21</div>
+        <div class="swatch" style="background: #edf8b1"><div class="number">15</div></div>
+        <div class="swatch" style="background: #c7e9b4"><div class="number">16</div></div>
+        <div class="swatch" style="background: #7fcdbb"><div class="number">17</div></div>
+        <div class="swatch" style="background: #41b6c4"><div class="number">18</div></div>
+        <div class="swatch" style="background: #1d91c0"><div class="number">19</div></div>
+        <div class="swatch" style="background: #225ea8"><div class="number">20</div></div>
+        <div class="swatch" style="background: #253494"><div class="number">21</div></div>
       </div>
       <div class="income">
+        <div class="ylabel">Income bracket</div>
         <div class="ct-chart ct-major-seventh" id="ct-income"></div>
       </div>
       <div class="source">Sources: U.S. Census Bureau; Washington State Department of Licensing</div>
       <div class="credit">AUDREY CARLSEN / THE SEATTLE TIMES</div>
+    </div>
     </responsive-child>
 
     <script src="income.js" async></script>

@@ -72,17 +72,18 @@ var $toolTip = $chart
 
 $chart.on('mouseenter', '.ct-point', function() {
   var $point = $(this);
-  var value = Math.round($point.attr('ct:value'));
+  var value = $point.attr('ct:value');
   var sign = value > 0 ? "&#9650;" : "&#9660;";
   value = value > 0 ? value : value * -1;
   var meta = commafy($point.attr('ct:meta'));
   if (value !== 0) {
+    value = Math.round(value, 1);
     $toolTip.html(
       `${meta} people issued a permit <br>(<span class='tiny'>${sign}</span><strong>${value}%</strong> from 2004)`
     ).show();
   } else {
     $toolTip.html(
-      `${meta} people issued a permit`
+      `${meta} people <br>issued a permit`
     ).show();
   }
 });
